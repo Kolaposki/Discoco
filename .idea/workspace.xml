@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2362a43e-dfe9-4de8-a3af-6d1fad8bcfb3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/discoco/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/discoco/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jumia/android.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/csvfiles/android.csv" afterDir="false" />

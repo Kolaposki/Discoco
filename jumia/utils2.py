@@ -18,7 +18,7 @@ def number_of():
     return len(prices_list)
 
 
-with open('csvfiles/iphone.csv', 'rt') as f:
+with open('jumia/csvfiles/iphone.csv', 'rt') as f:
     data = csv.reader(f)
     for row in data:
         percents_list.append(row[0])
