@@ -24,7 +24,7 @@ SECRET_KEY = 'ji_86jfp$)+a^fl_ab8ev88f#*j8^m$_i6sj)a@vigs3*5-#1^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://floating-ridge-31699.herokuapp.com']
 
 # Application definition
 

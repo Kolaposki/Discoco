@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2362a43e-dfe9-4de8-a3af-6d1fad8bcfb3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discoco/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/discoco/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +20,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/discoco" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="ProjectId" id="1WGJB511l0ZbEqsYd58yt1qbQPM" />
@@ -87,6 +88,14 @@
       <option name="presentableId" value="Default" />
       <updated>1578769859158</updated>
     </task>
+    <task id="LOCAL-00001" summary="added requirements">
+      <created>1578860818402</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578860818402</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -99,5 +108,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added requirements" />
+    <option name="LAST_COMMIT_MESSAGE" value="added requirements" />
   </component>
 </project>
