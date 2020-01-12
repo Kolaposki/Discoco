@@ -4,9 +4,10 @@
     <list default="true" id="2362a43e-dfe9-4de8-a3af-6d1fad8bcfb3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/discoco/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/discoco/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jumia/android.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/csvfiles/android.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jumia/iphone.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/csvfiles/iphone.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jumia/csvfiles/android.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/csvfiles/android.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jumia/csvfiles/iphone.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/csvfiles/iphone.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jumia/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jumia/utils2.py" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/utils2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
@@ -33,7 +34,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/jumia/csvfiles" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
@@ -41,6 +42,7 @@
       <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\csvfiles" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\csvfiles" />
       <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia" />
       <recent name="C:\Users\KOLAPO\Desktop\discoco" />
       <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\templates" />
