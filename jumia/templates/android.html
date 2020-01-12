@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+{% load my_extras %}
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css">
+
+    <title>{% block title %}Android Discounts{% endblock%}</title>
+</head>
+
+
+<body>
+<!-- Team -->
+<section id="team" class="">
+    <div class="container">
+        <h5 class="section-title h1">Android Discounts </h5>
+        <div class="col-xs-1" align="center">
+            <div class="alert alert-primary" role="alert">
+                <h5>Total Products: <b>{{ total }}</b></h5>
+                <h6>Range: 50% - 99%</h6>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Product Card -->
+
+            {% for scrape in scrapes %}
+            <div class=" col-xs-12 col-sm-4 col-md-3">
+                <div class="frontside">
+                    <div class="card">
+                        <div>
+                            <div class="card-img-overlay">
+                                <span class=" btn-danger btn-sm">{{ scrape.percent }}%</span>
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <p><img class=" img-fluid" src="{{ scrape.img_url }}" alt="card image"></p>
+                            <h6 class="card-title">{{ scrape.product | shortner }}</h6>
+                            <p class="card-text old-price">₦{{ scrape.old_price }}</p>
+                            <p class="card-text price">₦{{ scrape.price }}</p>
+                            <a href="{{ scrape.product_url }}" target="_blank" class="btn btn-primary">Get Offer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <!-- End -->
+        </div>
+    </div>
+</section>
+<!-- Team -->
+<footer>
+    <div class="col-xs-1" align="center">
+        <div class="alert alert-success" role="alert">
+            Discoco - Created by <a href="https://github.com/Kolaposki" class="alert-link" target="_blank" >Kolaposki</a>.
+            <i>Still in Beta Version.</i>
+        </div>
+    </div>
+</footer>
+<script src="{% static 'jquery.min.js' %}"></script>
+</body>
+
+</html>

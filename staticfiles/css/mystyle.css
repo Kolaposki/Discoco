@@ -1,0 +1,125 @@
+#team {
+    background: #eee !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #6610f2 !important;
+    border-color: #6610f2 !important;
+    box-shadow: none;
+    outline: none;
+}
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #6610f2 !important;
+    border-color: #6610f2 !important;
+}
+
+
+section {
+    padding: 60px;
+}
+
+section .section-title {
+    text-align: center;
+    color: #5c2ddd;
+    margin-bottom: 50px;
+}
+
+#team .card {
+    border: none;
+    background: #ffffff;
+}
+
+.frontside {
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    z-index: 2;
+    margin-bottom: 20px;
+}
+
+.frontside .card {
+    transition: 0.5s;
+    height: 400px;
+    width: 250px;
+    padding: 0px, 5px, 5px, 5px;
+
+}
+
+.frontside .card .card-title {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: black !important;
+    margin-bottom: -7px;
+}
+
+.frontside .card .card-body img {
+    width: 190px;
+    height: 190px;
+
+}
+
+.card-img-overlay {
+    position: relative !important;
+    margin-bottom: -30px !important;
+    padding-top: 8.5px !important;
+    padding-right: 8.5px !important;
+    padding-left: 8.5px !important;
+    cursor: text !important;
+
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.card::before,
+.card::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale3d(0, 0, 1);
+    transition: transform .3s ease-out 0s;
+    background: rgba(255, 255, 255, 0.1);
+    content: '';
+    pointer-events: none;
+}
+
+.card::before {
+    transform-origin: left top;
+}
+
+.card::after {
+    transform-origin: right bottom;
+}
+
+.card:hover::before,
+.card:hover::after,
+.card:focus::before,
+.card:focus::after {
+    transform: scale3d(1, 1, 1);
+}
+
+
+.old-price {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #bdbdbd;
+    text-decoration: line-through grey !important;
+
+}
+
+.price {
+    margin-top: -10px !important;
+    color: black !important;
+    font-weight: 645;
+    font-size: 15px;
+    margin-bottom: 10px !important;
+}
