@@ -3,8 +3,7 @@ from django.shortcuts import render
 
 from jumia import utils, utils2
 from .models import IphoneScrape, AndroidScrape
-
-
+from . import k
 # Create your views here.
 
 def index(request):
@@ -39,7 +38,7 @@ def android_scrape(request):
     except IntegrityError:
         pass
 
-    print("products Saved to database")
+    print("Android products Saved to database")
     all_details = AndroidScrape.objects.all()
     total_products = utils.number_of()
 
@@ -70,7 +69,7 @@ def iphone_scrape(request):
     except IntegrityError:
         pass
 
-    print("products Saved to database")
+    print("Iphone products Saved to database")
     all_details = IphoneScrape.objects.all()
     total_products = utils2.number_of()
     return render(request, 'iphone.html', {"scrapes": all_details, "total": total_products})

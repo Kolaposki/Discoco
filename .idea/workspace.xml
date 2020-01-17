@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2362a43e-dfe9-4de8-a3af-6d1fad8bcfb3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/discoco/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/discoco/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jumia/csvfiles/android.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/csvfiles/android.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jumia/csvfiles/iphone.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/csvfiles/iphone.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jumia/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jumia/utils2.py" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/utils2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jumia/templates/android.html" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/templates/android.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jumia/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -31,21 +28,24 @@
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="ProjectId" id="1WGJB511l0ZbEqsYd58yt1qbQPM" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/jumia/csvfiles" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/jumia/scrapecripts" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\csvfiles" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\Scripts" />
       <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\csvfiles" />
       <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia" />
       <recent name="C:\Users\KOLAPO\Desktop\discoco" />
       <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\csvfiles" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -60,7 +60,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.iphone-scrape">
+    <configuration name="iphone-scrape" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="discoco" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/jumia/Scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jumia/Scripts/iphone-scrape.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="discoco" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -84,6 +105,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.iphone-scrape" />
         <item itemvalue="Python.views" />
       </list>
     </recent_temporary>
@@ -114,7 +136,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
