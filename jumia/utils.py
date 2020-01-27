@@ -28,7 +28,7 @@ def scrape_data(percent_range: int, product_type_url: str):
     count = 1
     base_url = product_type_url
     url = base_url + str(count)
-    while url and count < 26:
+    while url and count < 11:
         reqs = req.get(url)
         content = reqs.content
         soup = BeautifulSoup(content, "html.parser", from_encoding="utf-8")
