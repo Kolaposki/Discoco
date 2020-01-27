@@ -42,7 +42,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/jumia/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -52,11 +52,11 @@
       <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\csvfiles" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\KOLAPO\Desktop\discoco\templates" />
       <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\templates" />
       <recent name="C:\Users\KOLAPO\Desktop\discoco\static\css" />
       <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\scrapecripts" />
       <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\Scripts" />
-      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\csvfiles" />
     </key>
   </component>
   <component name="RunDashboard">
