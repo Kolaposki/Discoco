@@ -31,7 +31,7 @@ def scrape_data(percent_range: int, product_type_url: str):
     while url and count < 26:
         reqs = req.get(url)
         content = reqs.content
-        soup = BeautifulSoup(content, "lxml", from_encoding="utf-8")
+        soup = BeautifulSoup(content, "html.parser", from_encoding="utf-8")
         print(f"                            Scraping : {url}")
 
         main = soup.find_all("a", {"class": "link"})
