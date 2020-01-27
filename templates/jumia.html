@@ -18,14 +18,22 @@
 
 
 <div class="container">
-    <div class="row">
-            <div class="col-xs-1 alert alert-primary" align="center">
-                <h3><a href="{% url 'android'%}">Android </a> </h3>
-            </div>
-            <div class="col-xs-1 alert alert-primary" align="center">
-                <h3><a href="{% url 'iphone'%}">IPhone </a> </h3>
-            </div>
-
+    <div class="row alert alert-danger text-center py-3" role="alert">
+        <div class="col-xs-1 alert alert-primary my-3 mx-3" align="center">
+            <h3><a href="{% url 'android'%}">Android </a></h3>
+        </div>
+        <div class="col-xs-1 alert alert-primary my-3 mx-3" align="center">
+            <h3><a href="{% url 'iphone'%}">IPhone </a></h3>
+        </div>
+        <div class="col-xs-1 alert alert-primary my-3 mx-3" align="center">
+            <h3><a href="{% url 'computing'%}">Computing </a></h3>
+        </div>
+        <div class="col-xs-1 alert alert-primary my-3 mx-3" align="center">
+            <h3><a href="{% url 'electronics'%}">Electronics </a></h3>
+        </div>
+        <div class="col-xs-1 alert alert-primary my-3 mx-3" align="center">
+            <h3><a href="{% url 'fashion'%}">Fashion </a></h3>
+        </div>
     </div>
 </div>
 {% endblock %}

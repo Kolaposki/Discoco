@@ -4,16 +4,25 @@
     <list default="true" id="2362a43e-dfe9-4de8-a3af-6d1fad8bcfb3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discoco/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/discoco/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jumia/android-scrape.py" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/scrapetools/android-scrape.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jumia/csvfiles/android.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/csvfiles/android.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jumia/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jumia/templates/android.html" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/templates/android.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jumia/templates/iphone.html" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/templates/iphone.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jumia/templatetags/my_extras.py" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/templatetags/my_extras.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jumia/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jumia/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jumia/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/mystyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/mystyle.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="discoco" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -33,18 +42,20 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/jumia/scrapecripts" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/jumia/templates" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\Scripts" />
-      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\csvfiles" />
-      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia" />
-      <recent name="C:\Users\KOLAPO\Desktop\discoco" />
-      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\templates" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\scrapetools" />
+      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia" />
+      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\csvfiles" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\templates" />
+      <recent name="C:\Users\KOLAPO\Desktop\discoco\static\css" />
+      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\scrapecripts" />
+      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\Scripts" />
       <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\csvfiles" />
     </key>
   </component>
@@ -60,8 +71,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.iphone-scrape">
-    <configuration name="iphone-scrape" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.utils">
+    <configuration name="android-scrape (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="discoco" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -69,11 +80,74 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/jumia/Scripts" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/jumia/scrapetools" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jumia/Scripts/iphone-scrape.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jumia/scrapetools/android-scrape.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="my_extras" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="discoco" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/jumia/templatetags" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jumia/templatetags/my_extras.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sampler" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="discoco" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/jumia" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jumia/sampler.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="utils" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="discoco" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/jumia" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jumia/utils.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -105,10 +179,16 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.iphone-scrape" />
+        <item itemvalue="Python.utils" />
+        <item itemvalue="Python.sampler" />
         <item itemvalue="Python.views" />
+        <item itemvalue="Python.my_extras" />
+        <item itemvalue="Python.android-scrape (1)" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -128,8 +208,25 @@
       <option name="project" value="LOCAL" />
       <updated>1578860818402</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added requirements">
+      <created>1579275074354</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579275074355</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added requirements">
+      <created>1579275137727</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1579275137727</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -147,5 +244,22 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added requirements" />
     <option name="LAST_COMMIT_MESSAGE" value="added requirements" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="__exception__" />
+        <watch expression="check" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

@@ -18,7 +18,7 @@
     <script src="{% static 'js/solid.js' %}"></script>
     <script src="{% static 'js/fontawesome.js' %}"></script>
 
-    <title>{% block title %}Android Discounts{% endblock%}</title>
+    <title>{% block title %}Computing Discounts{% endblock%}</title>
 </head>
 
 
@@ -49,7 +49,7 @@
                         <a class="nav-link" href="{% url 'iphone' %}">Iphone</a>
                     </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="{% url 'computing' %}">Computing</a>
+                        <a class="nav-link active" href="{% url 'computing' %}">Computing</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'electronics' %}">Electronics</a>
@@ -66,7 +66,7 @@
     <section class="main">
 
         <div class="container">
-            <h5 class="section-title h1">Android Discounts </h5>
+            <h5 class="section-title h1">Computing Discounts </h5>
             <div class="col-xs-1" align="center">
                 <div class="alert alert-primary text-center mx-0" role="alert">
                     <h5>Total Products: <b>{{ total }}</b></h5>
@@ -79,11 +79,11 @@
                                   Change discount range
                               </option>
 
-                            <option value="{% url 'android' 50 %}">50%</option>
-                            <option value="{% url 'android' 60 %}">60%</option>
-                            <option value="{% url 'android' 70 %}">70%</option>
-                            <option value="{% url 'android' 80 %}">80%</option>
-                            <option value="{% url 'android' 90 %}">90%</option>
+                            <option value="{% url 'computing' 50 %}">50%</option>
+                            <option value="{% url 'computing' 60 %}">60%</option>
+                            <option value="{% url 'computing' 70 %}">70%</option>
+                            <option value="{% url 'computing' 80 %}">80%</option>
+                            <option value="{% url 'computing' 90 %}">90%</option>
                         </select>
                     </div>
                 </div>
@@ -122,24 +122,6 @@
                 </div>
             {% endif %}
         </div>
-
-        <!--
-              {% for sub_article in articles %}
-              {% if forloop.first %}
-              <div class="row">{% endif %}
-                  <div class="col-xs-4">
-                      <a href="#">
-                          {{ sub_article.name }}
-                      </a>
-                  </div>
-                  {% if forloop.counter|divisibleby:3 %}
-              </div>
-              <div class="row">{% endif %}
-                  {% if forloop.last %}
-              </div>
-              {% endif %}
-              {% endfor %}
-              -->
     </section>
 </div>
 <!-- Team -->

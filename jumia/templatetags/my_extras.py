@@ -17,4 +17,7 @@ def shortner(product):
     else:
         return product
 
-# register.filter('cut', cut)
+
+@register.filter(name='toint')
+def toint(product):
+    return int(product)
