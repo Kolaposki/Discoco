@@ -25,9 +25,9 @@
                     <h5>Total Products: <b>{{ total }}</b></h5>
                     <h6>Range: {{ discount_per }}% - 99%</h6>
 
-                    <div class="form-group col ">
-                        <select data-style="btn btn-primary" value="Change" type="button" title="Change"
-                                class="btn btn-primary text-center" onchange="location = this.value;">
+                    <div class="col ">
+                        <select value="Change" type="button" title="Change"
+                                class="option-menu text-center" onchange="location = this.value;">
                              <option value="none" selected disabled hidden>
                                   Change discount range
                               </option>
@@ -46,7 +46,7 @@
             <div class="row">
                 <!-- Product Card -->
                 {% for scrape in scrapes %}
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
                         <div class="frontside">
                             <div class="card">
                                 <div>
@@ -55,11 +55,11 @@
                                     </div>
                                 </div>
                                 <div class="card-body text-center">
-                                    <p><img class="img-fluid" src="{% static 'images/source1.gif' %}" data-src="{{ scrape.img_url }}" alt="card image"></p>
-                                    <h6 class="card-title">{{ scrape.product | shortner }}</h6>
+                                    <p><img class="img-fluid" src="{% static 'images/source1.gif' %}" data-src="{{ scrape.img_url }}" alt="Android"></p>
+                                    <h6 class="card-title">{{ scrape.product}}</h6>
                                     <p class="card-text old-price">₦{{ scrape.old_price }}</p>
                                     <p class="card-text price">₦{{ scrape.price }}</p>
-                                    <a href="{{ scrape.product_url }}" target="_blank" class="btn btn-primary">Get Offer</a>
+                                    <a href="{{ scrape.product_url }}" target="_blank" class="btn btn-primary offer-btn">Get Offer</a>
                                 </div>
                             </div>
                         </div>
