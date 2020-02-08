@@ -4,6 +4,7 @@
     date='1/17/2020',
     author='Oshodi Kolapo',
 """
+from datetime import datetime
 
 from time import sleep
 from bs4 import BeautifulSoup
@@ -11,6 +12,8 @@ import requests as req
 import csv
 
 dataToCsv = []
+
+startTime = datetime.now()
 
 
 def only_percent(data: str):
@@ -24,9 +27,9 @@ def only_percent(data: str):
 
 def scrape_data():
     count = 1
-    base_url = 'https://www.jumia.com.ng/ios-phones/?page='
+    base_url = 'https://www.jumia.com.ng/health-beauty/?page='
+    # base_url = 'https://www.jumia.com.ng/ios-phones/?page='
     url = base_url + str(count)
-
     while url and count < 26:
         reqs = req.get(url)
         content = reqs.content
@@ -42,7 +45,7 @@ def scrape_data():
                 pass
 
             percent = only_percent(percent_off)
-            if percent < -50:
+            if percent < -70:
                 product = index.find("span", {"class": "name"}).text.replace('\uff1a', ':').replace('\uff09', ')')
                 price = index.find("span", {"class": "price"}).text.replace('\u20a6', '').strip()
                 old_price = index.find("span", {"class": "price -old"}).text.replace('\u20a6', '').strip()
@@ -59,12 +62,6 @@ def scrape_data():
         print("SUCCESS")
 
 
-while True:
-    print("Start Iphone Scrape")
-    scrape_data()
-    with open('jumia/csvfiles/iphone.csv', 'w', newline='') as csvFile:
-        writer = csv.writer(csvFile)
-        writer.writerows(dataToCsv)
-
-    print("Sleeping from Iphne.....")
-    sleep(3 * 60)
+scrape_data()
+total_time = datetime.now() - startTime
+print(total_time)

@@ -27,4 +27,16 @@ urlpatterns = [
 
     path('fashion/<int:discount>', views.fashion_scrape, name='fashion'),
     path('fashion/', views.fashion_scrape, name='fashion'),
+
+    path('health-beauty/<int:discount>', views.health_beauty_scrape, name='health-beauty'),
+    path('health-beauty/', views.health_beauty_scrape, name='health-beauty'),
+
+    path('women-fashion/<int:discount>', views.women_fashion_scrape, name='women-fashion'),
+    path('women-fashion/', views.women_fashion_scrape, name='women-fashion'),
+
+    path('men-fashion/<int:discount>', views.men_fashion_scrape, name='men-fashion'),
+    path('men-fashion/', views.men_fashion_scrape, name='men-fashion'),
+
+    path('kids-fashion/<int:discount>', views.kids_fashion_scrape, name='kids-fashion'),
+    path('kids-fashion/', views.kids_fashion_scrape, name='kids-fashion'),
 ]

@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2362a43e-dfe9-4de8-a3af-6d1fad8bcfb3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jumia/android-scrape.py" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/scrapetools/android-scrape.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jumia/csvfiles/android.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/csvfiles/android.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jumia/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jumia/templates/android.html" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/templates/android.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jumia/templates/iphone.html" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/templates/iphone.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jumia/templatetags/my_extras.py" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/templatetags/my_extras.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jumia/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jumia/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jumia/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/mystyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/mystyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jumia/iphone-scrape.py" beforeDir="false" afterPath="$PROJECT_DIR$/jumia/iphone-scrape.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,22 +33,22 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/jumia/templates" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\templates" />
+      <recent name="C:\Users\KOLAPO\Desktop\discoco\templates" />
+      <recent name="C:\Users\KOLAPO\Desktop\discoco\static\css" />
+      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\scrapecripts" />
+      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\Scripts" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\templates" />
       <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\scrapetools" />
       <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia" />
       <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\csvfiles" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\KOLAPO\Desktop\discoco\templates" />
-      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\templates" />
-      <recent name="C:\Users\KOLAPO\Desktop\discoco\static\css" />
-      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\scrapecripts" />
-      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\Scripts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -72,50 +63,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.utils">
-    <configuration name="android-scrape (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="discoco" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/jumia/scrapetools" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jumia/scrapetools/android-scrape.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="my_extras" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="discoco" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/jumia/templatetags" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jumia/templatetags/my_extras.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="sampler" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.views">
+    <configuration name="iphone-scrape" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="discoco" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -127,7 +76,49 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jumia/sampler.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jumia/iphone-scrape.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sample" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="discoco" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/jumia" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jumia/sample.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tasks" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="discoco" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/jumia" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jumia/tasks.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -180,11 +171,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.utils" />
-        <item itemvalue="Python.sampler" />
         <item itemvalue="Python.views" />
-        <item itemvalue="Python.my_extras" />
-        <item itemvalue="Python.android-scrape (1)" />
+        <item itemvalue="Python.utils" />
+        <item itemvalue="Python.sample" />
+        <item itemvalue="Python.tasks" />
+        <item itemvalue="Python.iphone-scrape" />
       </list>
     </recent_temporary>
   </component>
@@ -243,6 +234,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+      <path value="$PROJECT_DIR$/discoco" />
+    </ignored-roots>
     <MESSAGE value="added requirements" />
     <option name="LAST_COMMIT_MESSAGE" value="added requirements" />
   </component>

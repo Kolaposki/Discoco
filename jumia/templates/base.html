@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock title %}</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="ROBOTS" content="ALL">
+    <meta name="Copyright" content="Kolalcan">
+
+
+    <!-- css Files-->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/sample-style.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}">
+
+    <!-- js files -->
+    <script src="{% static 'js/solid.js' %}"></script>
+    <script src="{% static 'js/fontawesome.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/modernizr.js' %}"></script>
+    <script src="{% static 'js/eager-image-loader.min.js' %}"></script>
+
+    <script>
+        // Wait for window load
+        $(window).load(function () {
+            // Animate loader off screen
+            $(".se-pre-con").fadeOut("slow");;
+        });
+    </script>
+
+</head>
+<body>
+
+<div class="se-pre-con"></div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a href="#">
+            <h2 class="title">Discoco</h2>
+        </a>
+
+        <button class="btn btn-primary d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <i class="fas fa-align-justify"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'android' %}">Android</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'iphone' %}">Iphone</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'computing' %}">Computing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'electronics' %}">Electronics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'health-beauty' %}">Health & Beauty</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="{% url 'fashion' %}" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Fashion
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'men-fashion' %}">Men</a>
+                        <a class="dropdown-item" href="{% url 'women-fashion' %}">Women</a>
+                        <a class="dropdown-item" href="{% url 'kids-fashion' %}">Kids</a>
+                        <a class="dropdown-item" href="{% url 'fashion' %}">All</a>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    {% block content %}
+
+    {% endblock %}
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer col-xs-1" align="center">
+        <div class="alert alert-success" role="alert">
+            Discoco - Created by <a href="https://github.com/Kolaposki" class="alert-link" target="_blank">Kolaposki</a>.
+            <i>Still in Beta Version.</i>
+        </div>
+    </div>
+</footer>
+
+<!-- js files -->
+<script type="text/javascript">
+        new EagerImageLoader();
+</script>
+
+<script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+</html>

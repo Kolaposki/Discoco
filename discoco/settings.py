@@ -35,7 +35,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'jumia.apps.JumiaConfig'
+    'jumia.apps.JumiaConfig',
+
 ]
 
 MIDDLEWARE = [

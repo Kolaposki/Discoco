@@ -1,8 +1,9 @@
 from django.db import IntegrityError, OperationalError, connection
 from django.shortcuts import render
-
 from jumia import utils
 from .models import *
+import schedule
+import time
 
 
 def index(request):
@@ -18,15 +19,18 @@ def android_scrape(request, discount=50):
         discount = 50
 
     base_url = 'https://www.jumia.com.ng/android-phones/?page='
+
     percent, product, price, old_price, product_url, img_url = utils.scrape_data(discount, product_type_url=base_url)
     number_of_products = len(product)
 
+    # Deleting the old products
     try:
         AndroidScrape.objects.all().delete()
         print("Deleted old Android products from database")
     except OperationalError:
         pass
 
+    # Adding the new products
     count = 0
     try:
         for item in range(number_of_products):
@@ -173,4 +177,124 @@ def fashion_scrape(request, discount=50):
     total_products = number_of_products
 
     return render(request, 'fashion.html',
+                  {"scrapes": all_details, "total": total_products, "discount_per": discount})
+
+
+def health_beauty_scrape(request, discount=50):
+    base_url = 'https://www.jumia.com.ng/health-beauty/?page='
+    percent, product, price, old_price, product_url, img_url = utils.scrape_data(discount, product_type_url=base_url)
+    number_of_products = len(product)
+
+    try:
+        HealthBeautyScrape.objects.all().delete()
+        print("Deleted old health_beauty products from database")
+    except OperationalError:
+        pass
+
+    count = 0
+    try:
+        for item in range(number_of_products):
+            details = HealthBeautyScrape(product=product[count], percent=percent[count], price=price[count],
+                                         old_price=old_price[count],
+                                         product_url=product_url[count], img_url=img_url[count])
+            details.save()
+            count += 1
+    except IntegrityError:
+        pass
+
+    print("New Health_and_beauty products saved to database")
+    all_details = HealthBeautyScrape.objects.all()
+    total_products = number_of_products
+
+    return render(request, 'health-beauty.html',
+                  {"scrapes": all_details, "total": total_products, "discount_per": discount})
+
+
+def men_fashion_scrape(request, discount=50):
+    base_url = 'https://www.jumia.com.ng/mens-fashion/?page='
+    percent, product, price, old_price, product_url, img_url = utils.scrape_data(discount, product_type_url=base_url)
+    number_of_products = len(product)
+
+    try:
+        MenFashionScrape.objects.all().delete()
+        print("Deleted old men Fashion products from database")
+    except OperationalError:
+        pass
+
+    count = 0
+    try:
+        for item in range(number_of_products):
+            details = MenFashionScrape(product=product[count], percent=percent[count], price=price[count],
+                                       old_price=old_price[count],
+                                       product_url=product_url[count], img_url=img_url[count])
+            details.save()
+            count += 1
+    except IntegrityError:
+        pass
+
+    print("New men fashion products saved to database")
+    all_details = MenFashionScrape.objects.all()
+    total_products = number_of_products
+
+    return render(request, 'men-fashion.html',
+                  {"scrapes": all_details, "total": total_products, "discount_per": discount})
+
+
+def women_fashion_scrape(request, discount=50):
+    base_url = 'https://www.jumia.com.ng/womens-fashion/?page='
+    percent, product, price, old_price, product_url, img_url = utils.scrape_data(discount, product_type_url=base_url)
+    number_of_products = len(product)
+
+    try:
+        WomenFashionScrape.objects.all().delete()
+        print("Deleted old women Fashion products from database")
+    except OperationalError:
+        pass
+
+    count = 0
+    try:
+        for item in range(number_of_products):
+            details = WomenFashionScrape(product=product[count], percent=percent[count], price=price[count],
+                                         old_price=old_price[count],
+                                         product_url=product_url[count], img_url=img_url[count])
+            details.save()
+            count += 1
+    except IntegrityError:
+        pass
+
+    print("New women fashion products saved to database")
+    all_details = WomenFashionScrape.objects.all()
+    total_products = number_of_products
+
+    return render(request, 'women-fashion.html',
+                  {"scrapes": all_details, "total": total_products, "discount_per": discount})
+
+
+def kids_fashion_scrape(request, discount=50):
+    base_url = 'https://www.jumia.com.ng/kids-fashion/?page='
+    percent, product, price, old_price, product_url, img_url = utils.scrape_data(discount, product_type_url=base_url)
+    number_of_products = len(product)
+
+    try:
+        KidsFashionScrape.objects.all().delete()
+        print("Deleted old kids Fashion products from database")
+    except OperationalError:
+        pass
+
+    count = 0
+    try:
+        for item in range(number_of_products):
+            details = KidsFashionScrape(product=product[count], percent=percent[count], price=price[count],
+                                        old_price=old_price[count],
+                                        product_url=product_url[count], img_url=img_url[count])
+            details.save()
+            count += 1
+    except IntegrityError:
+        pass
+
+    print("New kids fashion products saved to database")
+    all_details = KidsFashionScrape.objects.all()
+    total_products = number_of_products
+
+    return render(request, 'kids-fashion.html',
                   {"scrapes": all_details, "total": total_products, "discount_per": discount})

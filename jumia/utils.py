@@ -4,8 +4,10 @@
     date='1/11/2020',
     author='Oshodi Kolapo',
 """
+
 from bs4 import BeautifulSoup
 import requests as req
+import datetime
 
 
 def scrape_data(percent_range: int, product_type_url: str):
@@ -24,14 +26,15 @@ def scrape_data(percent_range: int, product_type_url: str):
         except IndexError:
             return 0
 
-    print("\nStarted Scraping Process")
+    start_time = datetime.datetime.now()
+    print(f"Started Scraping Process at {start_time}")
     count = 1
     base_url = product_type_url
     url = base_url + str(count)
     while url and count < 11:
         reqs = req.get(url)
         content = reqs.content
-        soup = BeautifulSoup(content, "html.parser", from_encoding="utf-8")
+        soup = BeautifulSoup(content, "lxml", from_encoding="utf-8")
         print(f"                            Scraping : {url}")
 
         main = soup.find_all("a", {"class": "link"})
@@ -64,5 +67,7 @@ def scrape_data(percent_range: int, product_type_url: str):
         count += 1
         url = base_url + str(count)
 
-    print("Finished Scraping Process ):")
+    print(f"Ended Scraping Process at {datetime.datetime.now()}")
+    print(f"Time taken: {datetime.datetime.now() - start_time}")
+
     return percents_list, products_list, prices_list, old_prices_list, product_urls_list, img_urls_list

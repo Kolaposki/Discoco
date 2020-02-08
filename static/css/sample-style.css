@@ -7,16 +7,44 @@ body {
     background: #eee !important;
 }
 
+.footer .alert{
+    margin-bottom: 0px !important;
+    margin-top: 5px;
+}
+
 .main {
     margin-bottom: 10px;
 }
 
 @media (max-width: 768px) {
+
+    .old-price {
+        margin-top: 10px;
+        font-size: 12px;
+    }
+    
+    .price {
+        margin-top: -13px !important;
+        font-size: 15px;
+        margin-bottom: 7px !important;
+    }
+
+    .frontside .card .card-title {
+        font-size: 11.8px !important;
+    }
+
     .frontside .card {
-        height: 400px !important;
-        width: 230px !important;
+        height: 320px !important;
+        width: 220px !important;
         margin-left: auto;
         margin-right: auto;
+
+    }
+
+
+    .frontside .card .card-body img {
+        width: 125px !important;
+        height: 125px !important;
 
     }
 
@@ -180,11 +208,11 @@ section .section-title {
 }
 
 .price {
-    margin-top: -10px !important;
+    margin-top: -10px;
     color: black !important;
     font-weight: 645;
     font-size: 15px;
-    margin-bottom: 10px !important;
+    margin-bottom: 10px ;
 }
 
 .navbar {
@@ -207,4 +235,19 @@ section .section-title {
     height: 1px;
     border-bottom: 1px dashed #ddd;
     margin: 40px 0;
+}
+
+
+
+/*show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(../images/loading.gif) center no-repeat #fff;
 }

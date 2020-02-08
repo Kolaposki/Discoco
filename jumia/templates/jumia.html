@@ -6,10 +6,8 @@
     <title>Jumia - Discoco</title>
     <!-- Favicon-->
     <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
-    <!-- Fontawesome CSS -->
-    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/sample-style.css' %}">
 </head>
 <body>
 
@@ -28,11 +26,10 @@
     <div class="container">
         <div class="row">
             <div class="col-12 card">
-                <h2 class="section-heading text-center">Jumia</h2>
+                <h2 class="section-heading text-center">Jumia Discounts</h2>
             </div>
         </div>
     </div>
-
 
     <div class="container-fluid my-3">
         <div class="row alert alert-primary text-center py-3" role="alert">
@@ -50,6 +47,15 @@
             </div>
             <div class="col-xs-1 alert alert-primary my-3 mx-3" align="center">
                 <h3><a href="{% url 'fashion'%}">Fashion </a></h3>
+            </div>
+            <div class="col-xs-1 alert alert-primary my-3 mx-3" align="center">
+                <h3><a href="{% url 'men-fashion'%}">Men Fashion </a></h3>
+            </div>
+            <div class="col-xs-1 alert alert-primary my-3 mx-3" align="center">
+                <h3><a href="{% url 'women-fashion'%}">Women Fashion </a></h3>
+            </div>
+            <div class="col-xs-1 alert alert-primary my-3 mx-3" align="center">
+                <h3><a href="{% url 'health-beauty'%}">Health and beauty </a></h3>
             </div>
         </div>
     </div>
