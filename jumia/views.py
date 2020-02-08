@@ -1,9 +1,7 @@
-from django.db import IntegrityError, OperationalError, connection
+from django.db import IntegrityError, OperationalError
 from django.shortcuts import render
 from jumia import utils
 from .models import *
-import schedule
-import time
 
 
 def index(request):
