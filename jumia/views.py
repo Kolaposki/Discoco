@@ -2,6 +2,9 @@ from django.db import IntegrityError, OperationalError
 from django.shortcuts import render
 from jumia import utils
 from .models import *
+from .scraper_tools import sample
+
+sample.scrape_data(70, 'https://www.jumia.com.ng/android-phones/?page=')
 
 
 def index(request):
@@ -13,34 +16,7 @@ def jumia_home(request):
 
 
 def android_scrape(request, discount=50):
-    if not discount or discount > 99 or discount < 5 or discount is None or discount is any(['', ' ', ]):
-        discount = 50
-
-    base_url = 'https://www.jumia.com.ng/android-phones/?page='
-
-    percent, product, price, old_price, product_url, img_url = utils.scrape_data(discount, product_type_url=base_url)
-    number_of_products = len(product)
-
-    # Deleting the old products
-    try:
-        AndroidScrape.objects.all().delete()
-        print("Deleted old Android products from database")
-    except OperationalError:
-        pass
-
-    # Adding the new products
-    count = 0
-    try:
-        for item in range(number_of_products):
-            details = AndroidScrape(product=product[count], percent=percent[count], price=price[count],
-                                    old_price=old_price[count],
-                                    product_url=product_url[count], img_url=img_url[count])
-            details.save()
-            count += 1
-    except IntegrityError:
-        pass
-
-    print("New Android products saved to database")
+    number_of_products = 20
     all_details = AndroidScrape.objects.all()
     total_products = number_of_products
 
