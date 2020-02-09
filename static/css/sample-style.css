@@ -83,8 +83,8 @@ body {
     }
 
     .row {
-        margin-right: 0px !important;
-        margin-left: 0px !important;
+        margin-right: -15px !important;
+        margin-left: -15px !important;
     }
 
     select,
