@@ -1,8 +1,5 @@
 from django.shortcuts import render
 from .models import *
-from .scraper_tools import sample
-
-sample.massive_scrape_job()
 
 
 def index(request):
