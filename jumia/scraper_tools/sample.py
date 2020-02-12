@@ -114,6 +114,7 @@ def massive_scrape_job():
     scrape_data(50, 'https://www.jumia.com.ng/computing/?page=', product_category='Computing',
                 db_name=ComputingScrape)
 
+    '''
     # ElectronicsScrape
     scrape_data(50, 'https://www.jumia.com.ng/electronics/?page=', product_category='Electronics',
                 db_name=ElectronicsScrape)
@@ -137,6 +138,6 @@ def massive_scrape_job():
     # KidsFashionScrape
     scrape_data(50, 'https://www.jumia.com.ng/kids-fashion/?page', product_category='Kids-Fashion',
                 db_name=KidsFashionScrape)
-
+    '''
     print(f"Ended MASSIVE SCRAPING JOB at {datetime.datetime.now()}")
     print(f"Total time elapsed : {datetime.datetime.now() - start_time}")

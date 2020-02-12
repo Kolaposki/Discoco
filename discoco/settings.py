@@ -36,8 +36,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'jumia.apps.JumiaConfig',
-
 ]
+
+
+SCHEDULER_AUTOSTART = True
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
