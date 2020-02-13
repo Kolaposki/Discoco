@@ -14,7 +14,7 @@ from . import sample
 def start():
     scheduler = BackgroundScheduler()
     # day_of_week='mon-fri', hour='9', minute='30', second='10',id='task_time'
-    scheduler.add_job(sample.massive_scrape_job, 'interval', minutes=60*3)
+    scheduler.add_job(sample.massive_scrape_job, 'interval', minutes=5)
     print(f"        ------ Scheduling to scrape for another 3hrs ----\nTime at scheduling : {datetime.datetime.now()}")
     time.sleep(2)
     scheduler.start()
