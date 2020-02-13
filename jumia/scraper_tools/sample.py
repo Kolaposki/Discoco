@@ -37,7 +37,7 @@ def scrape_data(percent_range: int, product_type_url: str, product_category: str
         reqs = req.get(url)
         content = reqs.content
         soup = BeautifulSoup(content, "lxml", from_encoding="utf-8")
-        print(f"                            Scraping : {url}")
+        #print(f"                            Scraping : {url}")
 
         main = soup.find_all("a", {"class": "link"})
         for page_index in main:
@@ -69,7 +69,7 @@ def scrape_data(percent_range: int, product_type_url: str, product_category: str
         count += 1
         url = base_url + str(count)
 
-    print(f"Ended Scraping Process at {datetime.datetime.now()}")
+    print(f"Ended Scraping Process of {product_category} at {datetime.datetime.now()}")
     print(f"Time taken: {datetime.datetime.now() - start_time}")
 
     # Deleting the old products
@@ -116,13 +116,13 @@ def massive_scrape_job():
     scrape_data(50, 'https://www.jumia.com.ng/electronics/?page=', product_category='Electronics',
                 db_name=ElectronicsScrape)
 
-    # FashionScrape
-    scrape_data(50, 'https://www.jumia.com.ng/category-fashion-by-jumia/?page=', product_category='Fashion',
-                db_name=FashionScrape)
-
     # HealthBeautyScrape
     scrape_data(50, 'https://www.jumia.com.ng/health-beauty/?page=', product_category='Health-Beauty',
                 db_name=HealthBeautyScrape)
+
+    # FashionScrape
+    scrape_data(50, 'https://www.jumia.com.ng/category-fashion-by-jumia/?page=', product_category='Fashion',
+                db_name=FashionScrape)
 
     # MenFashionScrape
     scrape_data(50, 'https://www.jumia.com.ng/mens-fashion/?page=', product_category='Men-Fashion',
