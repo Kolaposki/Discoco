@@ -37,7 +37,7 @@ def scrape_data(percent_range: int, product_type_url: str, product_category: str
         reqs = req.get(url)
         content = reqs.content
         soup = BeautifulSoup(content, "lxml", from_encoding="utf-8")
-        #print(f"                            Scraping : {url}")
+        # print(f"                            Scraping : {url}")
 
         main = soup.find_all("a", {"class": "link"})
         for page_index in main:
