@@ -13,7 +13,7 @@ from . import sample
 
 def start():
     scheduler = BackgroundScheduler()
-    scheduler.add_job(sample.massive_scrape_job, 'interval', minutes=30, max_instances=2)
-    print(f"       ------ Scheduling to scrape for another 30 mins ----\nTime at scheduling : {datetime.datetime.now()}")
+    scheduler.add_job(sample.massive_scrape_job, 'interval', minutes=45, max_instances=2)
+    print(f"       ------ Scheduling to scrape for another 45 mins ----\nTime at scheduling : {datetime.datetime.now()}")
     time.sleep(2)
     scheduler.start()

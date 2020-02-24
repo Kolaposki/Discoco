@@ -37,19 +37,19 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\KOLAPO\Desktop\discoco\static\css" />
-      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\templates" />
-      <recent name="C:\Users\KOLAPO\Desktop\discoco\templates" />
-      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\scrapecripts" />
-      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\Scripts" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\Worker" />
       <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\templates" />
       <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\scrapetools" />
       <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia" />
       <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\csvfiles" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\KOLAPO\Desktop\discoco\static\css" />
+      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\templates" />
+      <recent name="C:\Users\KOLAPO\Desktop\discoco\templates" />
+      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\scrapecripts" />
+      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\Scripts" />
     </key>
   </component>
   <component name="RunDashboard">
