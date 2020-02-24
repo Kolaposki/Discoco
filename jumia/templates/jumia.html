@@ -1,73 +1,259 @@
 <!DOCTYPE html>
+{% extends 'base.html' %}
 {% load static %}
-<html lang="en">
+{% load my_extras %}
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Jumia - Discoco</title>
-    <!-- Favicon-->
-    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}">
-    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/sample-style.css' %}">
+    <title>{% block title %}Jumia Discounts | Discoco{% endblock%}</title>
 </head>
+
+
 <body>
+{% block content %}
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="{% url 'index'%}">Home</a>
-    <div class="collapse navbar-collapse">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="{% url 'admin:index'%}">Admin</a></li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'jumia_home'%}">Jumia</a></li>
-        </ul>
-    </div>
-</nav>
+<!-- Page Content  -->
+<div id="content">
 
-<div class="container my-3">
+    <section class="main">
+        <br><br>
+        <!-- Android details -->
+        <div class="container">
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12 card">
-                <h2 class="section-heading text-center">Jumia Discounts</h2>
+            <div class="col-xs-1" align="center">
+                <div class="alert alert-secondary text-center mx-0" role="alert">
+                    <h5>Android Discounts</h5>
+                    <a href="#" class="btn btn-secondary offer-btn">View all >></a>
+                </div>
             </div>
+
+            <div class="row">
+                <!-- Product Card -->
+                {% for scrape in scrapes1 %}
+                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
+                    <div class="frontside">
+                        <div class="card">
+                            <div>
+                                <div class="card-img-overlay">
+                                    <span class=" btn-danger btn-sm">{{ scrape.percent }}%</span>
+                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <p><img class="img-fluid" src="{% static 'images/source1.gif' %}"
+                                        data-src="{{ scrape.img_url }}" alt="Android"></p>
+                                <h6 class="card-title">{{ scrape.product}}</h6>
+                                <p class="card-text old-price">₦{{ scrape.old_price }}</p>
+                                <p class="card-text price">₦{{ scrape.price }}</p>
+                                <a href="{{ scrape.product_url }}" target="_blank" class="btn btn-primary offer-btn">Get
+                                    Offer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <!-- End -->
         </div>
-    </div>
 
-    <div class="container-fluid my-3">
-        <div class="row alert alert-primary text-center py-3" role="alert">
-            <div class="col-xs-1 alert alert-primary my-3 mx-3" align="center">
-                <h3><a href="{% url 'android'%}">Android </a></h3>
+        <br><br>
+        <!-- Iphone Details -->
+        <div class="container">
+
+            <div class="col-xs-1" align="center">
+                <div class="alert alert-secondary text-center mx-0" role="alert">
+                    <h5>IPhone Discounts</h5>
+                    <a href="#" class="btn btn-secondary offer-btn">View all >></a>
+                </div>
             </div>
-            <div class="col-xs-1 alert alert-primary my-3 mx-3" align="center">
-                <h3><a href="{% url 'iphone'%}">IPhone </a></h3>
+
+            <div class="row">
+                <!-- Product Card -->
+                {% for scrape in scrapes2 %}
+                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
+                    <div class="frontside">
+                        <div class="card">
+                            <div>
+                                <div class="card-img-overlay">
+                                    <span class=" btn-danger btn-sm">{{ scrape.percent }}%</span>
+                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <p><img class="img-fluid" src="{% static 'images/source1.gif' %}"
+                                        data-src="{{ scrape.img_url }}" alt="Android"></p>
+                                <h6 class="card-title">{{ scrape.product}}</h6>
+                                <p class="card-text old-price">₦{{ scrape.old_price }}</p>
+                                <p class="card-text price">₦{{ scrape.price }}</p>
+                                <a href="{{ scrape.product_url }}" target="_blank" class="btn btn-primary offer-btn">Get
+                                    Offer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
-            <div class="col-xs-1 alert alert-primary my-3 mx-3" align="center">
-                <h3><a href="{% url 'computing'%}">Computing </a></h3>
-            </div>
-            <div class="col-xs-1 alert alert-primary my-3 mx-3" align="center">
-                <h3><a href="{% url 'electronics'%}">Electronics </a></h3>
-            </div>
-            <div class="col-xs-1 alert alert-primary my-3 mx-3" align="center">
-                <h3><a href="{% url 'fashion'%}">Fashion </a></h3>
-            </div>
-            <div class="col-xs-1 alert alert-primary my-3 mx-3" align="center">
-                <h3><a href="{% url 'men-fashion'%}">Men Fashion </a></h3>
-            </div>
-            <div class="col-xs-1 alert alert-primary my-3 mx-3" align="center">
-                <h3><a href="{% url 'women-fashion'%}">Women Fashion </a></h3>
-            </div>
-            <div class="col-xs-1 alert alert-primary my-3 mx-3" align="center">
-                <h3><a href="{% url 'health-beauty'%}">Health and beauty </a></h3>
-            </div>
+            <!-- End -->
         </div>
-    </div>
+
+        <br><br>
+        <!-- Computing Details -->
+        <div class="container">
+
+            <div class="col-xs-1" align="center">
+                <div class="alert alert-secondary text-center mx-0" role="alert">
+                    <h5>Computing Discounts</h5>
+                    <a href="#" class="btn btn-secondary offer-btn">View all >></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Product Card -->
+                {% for scrape in scrapes3 %}
+                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
+                    <div class="frontside">
+                        <div class="card">
+                            <div>
+                                <div class="card-img-overlay">
+                                    <span class=" btn-danger btn-sm">{{ scrape.percent }}%</span>
+                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <p><img class="img-fluid" src="{% static 'images/source1.gif' %}"
+                                        data-src="{{ scrape.img_url }}" alt="Android"></p>
+                                <h6 class="card-title">{{ scrape.product}}</h6>
+                                <p class="card-text old-price">₦{{ scrape.old_price }}</p>
+                                <p class="card-text price">₦{{ scrape.price }}</p>
+                                <a href="{{ scrape.product_url }}" target="_blank" class="btn btn-primary offer-btn">Get
+                                    Offer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <!-- End -->
+        </div>
+
+        <br><br>
+        <!-- Electronics Details -->
+        <div class="container">
+
+            <div class="col-xs-1" align="center">
+                <div class="alert alert-secondary text-center mx-0" role="alert">
+                    <h5>Electronics Discounts</h5>
+                    <a href="#" class="btn btn-secondary offer-btn">View all >></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Product Card -->
+                {% for scrape in scrapes4 %}
+                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
+                    <div class="frontside">
+                        <div class="card">
+                            <div>
+                                <div class="card-img-overlay">
+                                    <span class=" btn-danger btn-sm">{{ scrape.percent }}%</span>
+                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <p><img class="img-fluid" src="{% static 'images/source1.gif' %}"
+                                        data-src="{{ scrape.img_url }}" alt="Android"></p>
+                                <h6 class="card-title">{{ scrape.product}}</h6>
+                                <p class="card-text old-price">₦{{ scrape.old_price }}</p>
+                                <p class="card-text price">₦{{ scrape.price }}</p>
+                                <a href="{{ scrape.product_url }}" target="_blank" class="btn btn-primary offer-btn">Get
+                                    Offer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <!-- End -->
+        </div>
+
+        <br><br>
+        <!-- Men's Fashion Details -->
+        <div class="container">
+
+            <div class="col-xs-1" align="center">
+                <div class="alert alert-secondary text-center mx-0" role="alert">
+                    <h5>Men's Fashion Discounts</h5>
+                    <a href="#" class="btn btn-secondary offer-btn">View all >></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Product Card -->
+                {% for scrape in scrapes5 %}
+                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
+                    <div class="frontside">
+                        <div class="card">
+                            <div>
+                                <div class="card-img-overlay">
+                                    <span class=" btn-danger btn-sm">{{ scrape.percent }}%</span>
+                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <p><img class="img-fluid" src="{% static 'images/source1.gif' %}"
+                                        data-src="{{ scrape.img_url }}" alt="Android"></p>
+                                <h6 class="card-title">{{ scrape.product}}</h6>
+                                <p class="card-text old-price">₦{{ scrape.old_price }}</p>
+                                <p class="card-text price">₦{{ scrape.price }}</p>
+                                <a href="{{ scrape.product_url }}" target="_blank" class="btn btn-primary offer-btn">Get
+                                    Offer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <!-- End -->
+        </div>
+
+        <br><br>
+        <!-- Women's Fashion Details -->
+        <div class="container">
+
+            <div class="col-xs-1" align="center">
+                <div class="alert alert-secondary text-center mx-0" role="alert">
+                    <h5>Women's Fashion Discounts</h5>
+                    <a href="#" class="btn btn-secondary offer-btn">View all >></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Product Card -->
+                {% for scrape in scrapes6 %}
+                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
+                    <div class="frontside">
+                        <div class="card">
+                            <div>
+                                <div class="card-img-overlay">
+                                    <span class=" btn-danger btn-sm">{{ scrape.percent }}%</span>
+                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <p><img class="img-fluid" src="{% static 'images/source1.gif' %}"
+                                        data-src="{{ scrape.img_url }}" alt="Android"></p>
+                                <h6 class="card-title">{{ scrape.product}}</h6>
+                                <p class="card-text old-price">₦{{ scrape.old_price }}</p>
+                                <p class="card-text price">₦{{ scrape.price }}</p>
+                                <a href="{{ scrape.product_url }}" target="_blank" class="btn btn-primary offer-btn">Get
+                                    Offer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <!-- End -->
+        </div>
+
+    </section>
 </div>
 
-<footer>
-    <div class="col-xs-1" align="center">
-        <div class="alert alert-success" role="alert">
-            Discoco - Created by <a href="https://github.com/Kolaposki" class="alert-link" target="_blank">Kolaposki</a>.
-            <i>Still in Beta Version.</i>
-        </div>
-    </div>
-</footer>
+{% endblock %}
 </body>
+
 </html>

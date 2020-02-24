@@ -104,6 +104,7 @@ def massive_scrape_job():
     # AndroidScrape
     scrape_data(50, 'https://www.jumia.com.ng/android-phones/?page=', product_category='Android',
                 db_name=AndroidScrape)
+
     # IphoneScrape
     scrape_data(50, 'https://www.jumia.com.ng/ios-phones/?page=', product_category='IPhone',
                 db_name=IphoneScrape)

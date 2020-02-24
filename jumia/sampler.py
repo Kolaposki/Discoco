@@ -73,3 +73,6 @@ print(old)
 print(url)
 print(img)
 '''
+
+#mylist = [1, 3, 5, 6, 90, 5, 6, 78, 2, 4, 57, 8, 9]
+#print(mylist[-4:])

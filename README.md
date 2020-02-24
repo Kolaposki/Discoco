@@ -2,7 +2,7 @@
 
 A web application that grabs discounts from E-Commerce websites. Built using Django
 
-Find it live on [Heroku](https://floating-ridge-31699.herokuapp.com/jumia/)
+Find it live on [Heroku](https://discoco.herokuapp.com/jumia/)
 
 ## E-Commerce Sites Supported
 [Jumia](www.jumia.com)

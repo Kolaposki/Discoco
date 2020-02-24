@@ -7,7 +7,19 @@ def index(request):
 
 
 def jumia_home(request):
-    return render(request, 'jumia.html')
+    percent = 65
+    all_android_details = AndroidScrape.objects.filter(percent__gte=percent).order_by('-percent')[0:8]
+    all_iphone_details = IphoneScrape.objects.filter(percent__gte=percent).order_by('-percent')[0:8]
+    all_computing_details = ComputingScrape.objects.filter(percent__gte=percent).order_by('-percent')[0:8]
+    all_electronics_details = ElectronicsScrape.objects.filter(percent__gte=percent).order_by('-percent')[0:8]
+    all_menfashion_details = MenFashionScrape.objects.filter(percent__gte=percent).order_by('-percent')[0:8]
+    all_womenfashion_details = WomenFashionScrape.objects.filter(percent__gte=percent).order_by('-percent')[0:8]
+
+    # print(all_android_details)
+    return render(request, 'jumia.html',
+                  {"scrapes1": all_android_details, "scrapes2": all_iphone_details, "scrapes3": all_computing_details,
+                   "scrapes4": all_electronics_details, "scrapes5": all_menfashion_details,
+                   "scrapes6": all_womenfashion_details})
 
 
 def android_scrape(request, discount=50):
