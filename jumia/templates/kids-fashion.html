@@ -28,9 +28,9 @@
                     <div class="col ">
                         <select value="Change" type="button" title="Change"
                                 class="option-menu text-center" onchange="location = this.value;">
-                             <option value="none" selected disabled hidden>
-                                  Change discount range
-                              </option>
+                            <option value="none" selected disabled hidden>
+                                Change discount range
+                            </option>
 
                             <option value="{% url 'kids-fashion' 50 %}">50%</option>
                             <option value="{% url 'kids-fashion' 60 %}">60%</option>
@@ -46,33 +46,40 @@
             <div class="row">
                 <!-- Product Card -->
                 {% for scrape in scrapes %}
-                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
-                        <div class="frontside">
-                            <div class="card">
-                                <div>
-                                    <div class="card-img-overlay">
-                                        <span class=" btn-danger btn-sm">{{ scrape.percent }}%</span>
-                                    </div>
+                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
+                    <div class="frontside">
+                        <div class="card">
+                            <div>
+                                <div class="card-img-overlay">
+                                    <span class=" btn-danger btn-sm">{{ scrape.percent }}%</span>
                                 </div>
-                                <div class="card-body text-center">
-                                    <p><img class="img-fluid" src="{% static 'images/source1.gif' %}" data-src="{{ scrape.img_url }}" alt="Fashion"></p>
-                                    <h6 class="card-title">{{ scrape.product }}</h6>
-                                    <p class="card-text old-price">₦{{ scrape.old_price }}</p>
-                                    <p class="card-text price">₦{{ scrape.price }}</p>
-                                    <a href="{{ scrape.product_url }}" target="_blank" class="btn btn-primary offer-btn">Get Offer</a>
-                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <p><img class="img-fluid" src="{% static 'images/source1.gif' %}"
+                                        data-src="{{ scrape.img_url }}" alt="Fashion"></p>
+                                <h6 class="card-title">{{ scrape.product }}</h6>
+                                <p class="card-text old-price">₦{{ scrape.old_price }}</p>
+                                <p class="card-text price">₦{{ scrape.price }}</p>
+                                <a href="{{ scrape.product_url }}" target="_blank" class="btn btn-primary offer-btn">Get
+                                    Offer</a>
                             </div>
                         </div>
                     </div>
+                </div>
                 {% endfor %}
             </div>
             <!-- End -->
+
+            <div class="container">
+                {% include 'partials/_pagination.html' %}
+            </div>
+
             {% else %}
-                <div class="col-xs-1" align="center">
-                    <div class="alert alert-secondary alert-dismissible fade show" role="alert">
-                        <h6>No products available for now! <br>Check back later or try adjusting the discount.</h6>
-                    </div>
+            <div class="col-xs-1" align="center">
+                <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+                    <h6>No products available for now! <br>Check back later or try adjusting the discount.</h6>
                 </div>
+            </div>
             {% endif %}
         </div>
 

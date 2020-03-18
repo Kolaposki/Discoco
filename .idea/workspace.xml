@@ -18,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -34,22 +34,22 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/static/css" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\Worker" />
-      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\templates" />
-      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\scrapetools" />
-      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia" />
-      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\csvfiles" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\KOLAPO\Desktop\discoco\static\css" />
       <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\templates" />
       <recent name="C:\Users\KOLAPO\Desktop\discoco\templates" />
       <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\scrapecripts" />
       <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\Scripts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\Worker" />
+      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\templates" />
+      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\scrapetools" />
+      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia" />
+      <recent name="C:\Users\KOLAPO\Desktop\discoco\jumia\csvfiles" />
     </key>
   </component>
   <component name="RunDashboard">

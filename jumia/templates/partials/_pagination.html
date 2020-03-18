@@ -1,0 +1,33 @@
+
+<nav class="container-fluid mb-4 mt-2" aria-label="...">
+        {% if scrapes.has_other_pages %}
+            <ul class="pagination justify-content-center">
+                {% if scrapes.has_previous %}
+                    <li class="page-item"><a class="page-link" href="?page=1">First</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ scrapes.previous_page_number }}">Previous</a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                {% endif %}
+
+                {% for num in scrapes.paginator.page_range %}
+                    {% if scrapes.number == num %}
+                        <li class="page-item active">
+                            <a class="page-link" href="?page={{ scrapes.number }}">{{ scrapes.number }}</a>
+                        </li>
+                    {% elif num > scrapes.number|add:'-3' and num < scrapes.number|add:'3' %}
+                        <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+                    {% endif %}
+                {% endfor %}
+
+                {% if scrapes.has_next %}
+                    <li class="page-item"><a class="page-link" href="?page={{ scrapes.next_page_number }}">Next</a></li>
+                    <li class="page-item"><a class="page-link" href="?page={{ scrapes.paginator.num_pages }}">Last</a>
+                    </li>
+                {% endif %}
+            </ul>
+        {% endif %}
+</nav>

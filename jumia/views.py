@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import *
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 def index(request):
@@ -15,7 +16,6 @@ def jumia_home(request):
     all_menfashion_details = MenFashionScrape.objects.filter(percent__gte=percent).order_by('-percent')[0:8]
     all_womenfashion_details = WomenFashionScrape.objects.filter(percent__gte=percent).order_by('-percent')[0:8]
 
-    # print(all_android_details)
     return render(request, 'jumia.html',
                   {"scrapes1": all_android_details, "scrapes2": all_iphone_details, "scrapes3": all_computing_details,
                    "scrapes4": all_electronics_details, "scrapes5": all_menfashion_details,
@@ -23,61 +23,145 @@ def jumia_home(request):
 
 
 def android_scrape(request, discount=50):
-    all_details = AndroidScrape.objects.filter(percent__gte=discount)
+    all_details = AndroidScrape.objects.filter(percent__gte=discount).order_by('id')
     total_products = len(all_details)
+    page = request.GET.get('page', 1)
+    paginator = Paginator(all_details, 16)
+
+    try:
+        all_details = paginator.page(page)
+    except PageNotAnInteger:
+        all_details = paginator.page(1)
+    except EmptyPage:
+        all_details = paginator.page(paginator.num_pages)
     return render(request, 'android.html', {"scrapes": all_details, "total": total_products, "discount_per": discount})
 
 
 def iphone_scrape(request, discount=50):
-    all_details = IphoneScrape.objects.filter(percent__gte=discount)
+    all_details = IphoneScrape.objects.filter(percent__gte=discount).order_by('id')
     total_products = len(all_details)
+    page = request.GET.get('page', 1)
+    paginator = Paginator(all_details, 16)
+
+    try:
+        all_details = paginator.page(page)
+    except PageNotAnInteger:
+        all_details = paginator.page(1)
+    except EmptyPage:
+        all_details = paginator.page(paginator.num_pages)
     return render(request, 'iphone.html', {"scrapes": all_details, "total": total_products, "discount_per": discount})
 
 
 def computing_scrape(request, discount=50):
-    all_details = ComputingScrape.objects.filter(percent__gte=discount)
+    all_details = ComputingScrape.objects.filter(percent__gte=discount).order_by('id')
     total_products = len(all_details)
+    page = request.GET.get('page', 1)
+    paginator = Paginator(all_details, 16)
+
+    try:
+        all_details = paginator.page(page)
+    except PageNotAnInteger:
+        all_details = paginator.page(1)
+    except EmptyPage:
+        all_details = paginator.page(paginator.num_pages)
     return render(request, 'computing.html',
                   {"scrapes": all_details, "total": total_products, "discount_per": discount})
 
 
 def electronics_scrape(request, discount=50):
-    all_details = ElectronicsScrape.objects.filter(percent__gte=discount)
+    all_details = ElectronicsScrape.objects.filter(percent__gte=discount).order_by('id')
     total_products = len(all_details)
+    page = request.GET.get('page', 1)
+    paginator = Paginator(all_details, 16)
+
+    try:
+        all_details = paginator.page(page)
+    except PageNotAnInteger:
+        all_details = paginator.page(1)
+    except EmptyPage:
+        all_details = paginator.page(paginator.num_pages)
     return render(request, 'electronics.html',
                   {"scrapes": all_details, "total": total_products, "discount_per": discount})
 
 
 def fashion_scrape(request, discount=50):
-    all_details = FashionScrape.objects.filter(percent__gte=discount)
+    all_details = FashionScrape.objects.filter(percent__gte=discount).order_by('id')
     total_products = len(all_details)
+    page = request.GET.get('page', 1)
+    paginator = Paginator(all_details, 16)
+
+    try:
+        all_details = paginator.page(page)
+    except PageNotAnInteger:
+        all_details = paginator.page(1)
+    except EmptyPage:
+        all_details = paginator.page(paginator.num_pages)
     return render(request, 'fashion.html',
                   {"scrapes": all_details, "total": total_products, "discount_per": discount})
 
 
 def health_beauty_scrape(request, discount=50):
-    all_details = HealthBeautyScrape.objects.filter(percent__gte=discount)
+    all_details = HealthBeautyScrape.objects.filter(percent__gte=discount).order_by('id')
     total_products = len(all_details)
+    page = request.GET.get('page', 1)
+    paginator = Paginator(all_details, 16)
+
+    try:
+        all_details = paginator.page(page)
+    except PageNotAnInteger:
+        all_details = paginator.page(1)
+    except EmptyPage:
+        all_details = paginator.page(paginator.num_pages)
     return render(request, 'health-beauty.html',
                   {"scrapes": all_details, "total": total_products, "discount_per": discount})
 
 
 def men_fashion_scrape(request, discount=50):
-    all_details = MenFashionScrape.objects.filter(percent__gte=discount)
+    all_details = MenFashionScrape.objects.filter(percent__gte=discount).order_by('id')
     total_products = len(all_details)
+    page = request.GET.get('page', 1)
+    paginator = Paginator(all_details, 16)
+
+    try:
+        all_details = paginator.page(page)
+    except PageNotAnInteger:
+        all_details = paginator.page(1)
+    except EmptyPage:
+        all_details = paginator.page(paginator.num_pages)
+
     return render(request, 'men-fashion.html',
                   {"scrapes": all_details, "total": total_products, "discount_per": discount})
 
 
 def women_fashion_scrape(request, discount=50):
-    all_details = WomenFashionScrape.objects.filter(percent__gte=discount)
+    all_details = WomenFashionScrape.objects.filter(percent__gte=discount).order_by('id')
     total_products = len(all_details)
+    page = request.GET.get('page', 1)
+
+    paginator = Paginator(all_details, 16)
+    try:
+        all_details = paginator.page(page)
+    except PageNotAnInteger:
+        all_details = paginator.page(1)
+    except EmptyPage:
+        all_details = paginator.page(paginator.num_pages)
+
     return render(request, 'women-fashion.html',
                   {"scrapes": all_details, "total": total_products, "discount_per": discount})
 
 
 def kids_fashion_scrape(request, discount=50):
-    all_details = KidsFashionScrape.objects.filter(percent__gte=discount)
+    all_details = KidsFashionScrape.objects.filter(percent__gte=discount).order_by('id')
     total_products = len(all_details)
+    page = request.GET.get('page', 1)
+
+    paginator = Paginator(all_details, 10)
+    try:
+        all_details = paginator.page(page)
+    except PageNotAnInteger:
+        all_details = paginator.page(1)
+    except EmptyPage:
+        all_details = paginator.page(paginator.num_pages)
+
     return render(request, 'kids-fashion.html',
                   {"scrapes": all_details, "total": total_products, "discount_per": discount})
