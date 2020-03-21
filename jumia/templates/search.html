@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <title>{% block title %}Search results for {{ search_term|safe }}{% endblock%}</title>
+</head>
+
+<!-- Main Section -->
+    <div class="alert alert-success text-center mx-0">
+        <h3 class="font-weight-light">Search results for "{{search_term}}"</h3>
+        <h5>Total Products Found: <b>{{ total }}</b></h5>
+    </div>
+
+    <hr/>
+
+<div class="container">
+    {% if scrapes_1 or scrapes_2 or scrapes_3 or scrapes_4 or scrapes_5 or scrapes_6 or scrapes_7 or scrapes_8 %}
+     <div class="container">
+         {% include 'partials/_search-card.html' %}
+     </div>
+    {% else %}
+        <p class="d-block font-weight-light my-2 heading">No search results!</p>
+    {% endif %}
+</div>
+<!-- Main Section ends-->
+{% endblock content %}

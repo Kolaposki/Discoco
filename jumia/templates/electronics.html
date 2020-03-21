@@ -43,29 +43,9 @@
             </div>
 
             {% if total > 0 %}
-            <div class="row">
-                <!-- Product Card -->
-                {% for scrape in scrapes %}
-                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
-                        <div class="frontside">
-                            <div class="card">
-                                <div>
-                                    <div class="card-img-overlay">
-                                        <span class=" btn-danger btn-sm">{{ scrape.percent }}%</span>
-                                    </div>
-                                </div>
-                                <div class="card-body text-center">
-                                    <p><img class="img-fluid" src="{% static 'images/source1.gif' %}" data-src="{{ scrape.img_url }}" alt="Electronics"></p>
-                                    <h6 class="card-title">{{ scrape.product }}</h6>
-                                    <p class="card-text old-price">₦{{ scrape.old_price }}</p>
-                                    <p class="card-text price">₦{{ scrape.price }}</p>
-                                    <a href="{{ scrape.product_url }}" target="_blank" class="btn btn-primary offer-btn">Get Offer</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
+              <div class="container">
+                {% include 'partials/_product-card.html' %}
+             </div>
             <!-- End -->
 
              <div class="container">

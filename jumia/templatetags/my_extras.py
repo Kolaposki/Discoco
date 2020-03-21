@@ -21,3 +21,8 @@ def shortner(product):
 @register.filter(name='toint')
 def toint(product):
     return int(product)
+
+
+@register.filter(name='to_category')
+def to_category(value):
+    return value.__class__.__name__

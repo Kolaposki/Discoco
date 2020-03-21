@@ -13,6 +13,7 @@ app_name = 'jumia'
 
 urlpatterns = [
     path('', views.jumia_home, name='jumia_home'),
+    path('search/', views.search, name='search'),
 
     path('android/', views.android_scrape, name='android'),
     path('android/<int:discount>', views.android_scrape, name='android'),
