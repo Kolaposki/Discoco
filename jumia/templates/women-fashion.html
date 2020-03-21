@@ -43,14 +43,10 @@
             </div>
 
             {% if total > 0 %}
-                 <div class="container">
-                    {% include 'partials/_product-card.html' %}
-                 </div>
-                <!-- End -->
+                {% include 'partials/_product-card.html' %}
+                <!-- End of products -->
 
-                 <div class="container">
-                    {% include 'partials/_pagination.html' %}
-                 </div>
+                {% include 'partials/_pagination.html' %}
             {% else %}
                 <div class="col-xs-1" align="center">
                     <div class="alert alert-secondary alert-dismissible fade show" role="alert">
