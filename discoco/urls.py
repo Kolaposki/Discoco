@@ -17,9 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 
 from jumia import views, urls
+from jumia.api import urls as api_url
 
+app_name = 'discoco'
 urlpatterns = [
     path('', views.index, name='index'),
     path('admin/', admin.site.urls),
-    path('jumia/',  include(urls.urlpatterns))
+    path('jumia/', include(urls.urlpatterns)),
+    path('jumia/api/', include(api_url.urlpatterns)),
 ]
