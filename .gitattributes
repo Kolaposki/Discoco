@@ -1,3 +1,4 @@
 static/* linguist-vendored
 staticfiles/* linguist-vendored
 templates/* linguist-vendored
+jumia/templates* linguist-vendored
